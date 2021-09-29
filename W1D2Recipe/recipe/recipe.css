@@ -1,7 +1,10 @@
-.contents-list, .copyright-list, .comments-list,.comments-list ul{
-    list-style-type: none;
-    padding:0;
+body{
+    margin: 20px;
+    padding: 0;
+    background-image: url("silverware.jpg");
 }
+
+
 h1{
     color: lightyellow;
     background-color: lightgray;
@@ -28,14 +31,14 @@ em{
 .copyright-list>li{
     text-align: right;
 }
-body{
-    margin: 20px;
-    padding: 0;
-    background-image: url("silverware.jpg");
-}
+
 section{
     margin-left: 10px;
 }
 footer{
     margin-left: 10px;
+}
+.contents-list, .copyright-list, .comments-list,.comments-list ul{
+    list-style-type: none;
+    padding:0;
 }
