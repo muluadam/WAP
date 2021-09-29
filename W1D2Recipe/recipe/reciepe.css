@@ -1,0 +1,41 @@
+.contents-list, .copyright-list, .comments-list,.comments-list ul{
+    list-style-type: none;
+    padding:0;
+}
+h1{
+    color: lightyellow;
+    background-color: lightgray;
+    text-align: left;
+    text-decoration: underline;
+}
+h1#firsth1{
+    text-align: center;
+    text-decoration: underline;
+}
+em{
+    font-weight: bold;
+    font-style: normal;
+}
+.comments-list{
+    margin-left: 40px;
+}
+.comments-list>li>ul{
+    background-color: #FFFFA8;
+}
+.copyright-list{
+    display: inline-block;
+}
+.copyright-list>li{
+    text-align: right;
+}
+body{
+    margin: 20px;
+    padding: 0;
+    background-image: url("silverware.jpg");
+}
+section{
+    margin-left: 10px;
+}
+footer{
+    margin-left: 10px;
+}
