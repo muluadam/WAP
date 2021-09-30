@@ -7,8 +7,8 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Open aboutme.html",
-            "file": "d:\\MiU\\WAP\\Lab\\W1D2Recipe\\aboutme.html"
+            "name": "Open index.html", 
+            "file":"C:\\Users\\Muluadam\\Documents\\GitHub\\WAP\\index.html"
         }
     ]
 }
