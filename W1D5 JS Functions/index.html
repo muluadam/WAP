@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+
+    Look in the Chrome developer console to see the output. CTRL_SHIFT_J <br /> Or on Firefox with CTRL_SHIFT_K
+
+    <script src="functions.js" type="text/javascript">
+    </script>
+    <script>
+        /** 
+         * This function test max, maxOfThree, isVowel ,reverse and longestWord
+         * */
+        function myFunctionTest(expected, found) {
+            if (expected === found) {
+                return "TEST SUCCEEDED";
+            } else {
+                return "TEST FAILED.  Expected " + expected + " found " + found;
+            }
+        }
+
+        function myArrayFunctionTest(expected, found) {
+            if (expected.length != found.length) {
+                return "TEST FAILED.  Expected " + expected + " found " + found;
+            } else {
+                for (let index = 0; index < expected.length; index++) {
+
+                    if (expected[index] !== found[index]) {
+                        return "TEST FAILED.  Expected " + expected + " found " + found;
+                    }
+                }
+                return "TEST SUCCEEDED";
+            }
+        }
+
+        console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, max(20, 10)));
+        console.log("Expected output of maxOfThree(5,4,44) is 44  " + myFunctionTest(44, maxOfThree(5, 4, 44)));
+
+        console.log("Expected output of isVowel(e) is true  " + myFunctionTest(true, isVowel('e')));
+        console.log("Expected output of isVowel(f) is false  " + myFunctionTest(false, isVowel('f')));
+        console.log("Expected output of isVowel(book) is false  " + myFunctionTest(false, isVowel('book')));
+
+
+        console.log("-----------------------------");
+
+        const arr = [5, 6, 4];
+        console.log("Expected output of sum(5,6,4) is 15  " + myFunctionTest(15, sum(arr)));
+        console.log("Expected output of multiply(5,6,4) is 120  " + myFunctionTest(120, multiply(arr)));
+
+        console.log("-----------------------------");
+        console.log("Expected output of reverse('WAP') is PAW  " + myFunctionTest('PAW', reverse('WAP')));
+        console.log("Expected output of reverse('Muluadam') is madauluM  " + myFunctionTest('madauluM', reverse('Muluadam')));
+
+
+        const names = ['Jomes', 'Muluadam', 'Crockford', 'Ali', 'Bezos'];
+        console.log("-----------------------------");
+        console.log("-----------------------------");
+        console.log("names=  " + names.toString());
+        console.log("Expected output of findLongestWord({names}) is Crockford  " + myFunctionTest('Crockford', findLongestWord(names)));
+        const exppected = ['Muluadam', 'Crockford'];
+        console.log("Expected output of filterLongWords({names,5) is ['Muluadam', 'Crockford']  " + myArrayFunctionTest(exppected, filterLongWords(names, 5)));
+    </script>
+</body>
+
+</html>
