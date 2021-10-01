@@ -1,0 +1,61 @@
+ h1 {
+     color: white;
+ }
+ 
+ .nav {
+     width: 100%;
+     background-color: cornflowerblue;
+ }
+ 
+ .nav a {
+     width: 100px;
+     border-right: solid 1px black;
+ }
+ 
+ .content {
+     height: 500px;
+     width: 100%;
+     box-sizing: border-box;
+ }
+ 
+ .content div {
+     /* display: flex;
+     flex-direction: row; */
+     float: left;
+     /* float: left; */
+ }
+ 
+ .content .col-1 {
+     width: 24.5%;
+     border: solid 1px black;
+     height: 100%;
+     background-color: rgb(229, 229, 238);
+ }
+ 
+ .content .col-3 {
+     width: 25%;
+     height: 100%;
+     border: solid 1px black;
+     background-color: rgb(229, 229, 238);
+ }
+ 
+ .content .col-2 {
+     width: 50%;
+     height: 100%;
+     background-color: rgb(72, 72, 75);
+     border: solid 1px black;
+ }
+ 
+ .header {
+     height: 100px;
+     width: 100%;
+     background-color: darkkhaki;
+ }
+ 
+ .footer {
+     position: absolute;
+     bottom: 0;
+     height: 60px;
+     width: 100%;
+     background-color: cornflowerblue;
+ }

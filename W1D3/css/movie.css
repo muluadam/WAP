@@ -28,6 +28,7 @@ header>div {
 
 #body_container>h1 {
     text-align: center;
+    text-shadow: 3px 3px #999999;
 }
 
 #body_container>div>aside {
