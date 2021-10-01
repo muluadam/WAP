@@ -143,19 +143,22 @@
      //  });
  }
  const jdfiddleUpdate = function jsfiddleUpdate() {
+         document.writeln('<h1>JSFiddle Update</h1>');
+
          const a = [1, 3, 5, 3, 3];
          const b = a.map(function(elem, i, array) {
              return elem * 10;
          })
-         document.writeln(b.toString() + "<br/>");
+         document.writeln("Orginal Array =" + a.toString() + "<br/>");
+         document.writeln("Mapped to  *10 =" + b.toString() + "<br/>");
          const c = a.filter(function(elem, i, array) {
              return elem === 3;
          });
-         document.writeln(c.toString() + "<br/>");
+         document.writeln("filtered only 3 =" + c.toString() + "<br/>");
          const d = a.reduce(function(prevValue, elem, i, array) {
              return prevValue * elem;
          });
-         document.writeln(d + "<br/>");
+         document.writeln("product of array =" + d + "<br/>");
          const d2 = a.find(function(elem) { return elem > 1; }); //3
          const d3 = a.findIndex(function(elem) { return elem > 1; }); //1
          document.writeln(d2 + "<br/>");
