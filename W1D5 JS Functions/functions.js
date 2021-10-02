@@ -101,18 +101,18 @@
      /**
       * 
       * @param {Array of String} array 
-      * @returns longest one word
+      * @returns length of longest word
       */
  const findLongestWord = function findLongestWord(array) {
          if (array.length < 1)
-             return null;
+             return 0;
          let longWord = array[0];
          for (let index = 0; index < array.length; index++) {
              if (array[index].length > longWord.length) {
                  longWord = array[index];
              }
          }
-         return longWord;
+         return longWord.length;
      }
      //const words = ["ada", "muluadam", "tmesgenakalu"];
      //  console.log(findLongestWord(words));
