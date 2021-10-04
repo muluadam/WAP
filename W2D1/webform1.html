@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Regular Expression</title>
+    <link rel="stylesheet" href="webform1.css" />
+</head>
+
+<body>
+    <form>
+        <label>Email address</label>
+        <input type="text" placeholder="Enter email">
+        <p>We'll never share your email with anyone else.</p>
+        <label>Another input</label>
+        <input type="text" pattern="https?://.*">
+        <label>Password</label>
+        <input type="password" placeholder="Password" required pattern="(?=\d+)(?=.*[a-z]*)(?=.*[A-Z]*).{10,}" title="must have upper case, lower case and number">
+        <label><input type="checkbox"> Check me out</label>
+        <div><input type="submit" value="Submit"></div>
+    </form>
+
+</body>
+
+</html>

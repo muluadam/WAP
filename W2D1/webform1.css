@@ -1,0 +1,30 @@
+form {
+    display: grid;
+    grid-row-gap: 10px;
+    margin: 10px;
+}
+
+label {
+    font-size: 30px;
+}
+
+input[type="text"],
+input[type="password"] {
+    font-size: 26px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: solid 1px grey;
+}
+
+input[type="submit"] {
+    font-size: 26px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: dodgerblue;
+    border-width: 0;
+    color: white;
+}
+
+p {
+    color: gray;
+}
