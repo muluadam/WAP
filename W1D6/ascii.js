@@ -86,7 +86,7 @@ window.onload = function() {
             document.getElementById("text-area").value = animationcontent[index];
             setTimeout(function() {
                 animate((index + 1) % animationcontent.length)
-            }, isTurbo ? 50 : 250);
+            }, isTurbo ? 40 : 300);
         }
     }
 }
