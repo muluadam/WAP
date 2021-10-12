@@ -5,29 +5,26 @@ describe("Account",function(){
 });
 describe("Deposit",function(){
    
-    it("Deposite Balance must add the value to the balance",function(){
+    it("add the value to the balance",function(){
         let acc= new Account("23456");
         acc.deposit(100);
         assert.equal(acc.getBalance(),100);
     });
-    it("Deposite balance, if value is negative it must throw error",function(){
+    it("negative value must throw error",function(){
         let acc=new Account("64321");
-        assert.throw(()=>acc.deposit(-100), Error);
+        assert.throw(()=>acc.deposit(-10), Error);
     });
 });
 describe("withdraw",function(){
-    it("Withdraw Balance must deduct from the balance, if negative throw error",function(){
-        let acc=new Account("123456");
-        assert.throw(()=>acc.withdraw(-100), Error);
-    });
-    it("withdraw amount, throw error when trying to withdraw amount greater than balance",function(){
+   
+    it("withdraw amount, throw error ",function(){
         let acc=new Account("123457");
         assert.throw(()=>acc.withdraw(100),Error);
     });
 })
 
 describe("SavingsAccount",function(){
-    it("Add Interest on Savings account",function(){
+    it("Add Interest",function(){
         let acc=new SavingsAccount("123456",50);
         acc.deposit(100);
         acc.addInterest();
@@ -35,7 +32,7 @@ describe("SavingsAccount",function(){
     });
 })
 describe("CheckingAccount",function(){
-    it("Allow the withdraw upto the overDraft overdraft amount",function(){
+    it("withdraw upto the overDraft ",function(){
         let acc=new CheckingAccount("654321",100);
         acc.withdraw(100);
         assert.equal(-100,acc.getBalance());
@@ -44,10 +41,7 @@ describe("CheckingAccount",function(){
         let acc=new CheckingAccount("123456",100);
         assert.throw(()=>acc.withdraw(121),Error);
     });
-    it("negative withdrawal must throw error",function(){
-        let acc=new CheckingAccount("123456",100);
-        assert.throw(()=>acc.withdraw(-10),Error);
-    });
+   
    
 });
 describe("Bank",function(){
