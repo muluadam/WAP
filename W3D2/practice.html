@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <style>
+        .formClass{
+            position:fixed;
+            top: 20px;
+            left: 10px;
+            border: 2px solid blue;
+        }
+        div{ 
+            border: 1px solid red;
+            width: 50px;
+            height: 50px;
+            border-radius:50px;
+        }
+    </style>
+    <script >
+      
+$(function() {
+
+  const colors = ["red","black","yellow","green"];
+
+
+
+
+
+
+  function randomColor() {
+      let color = colors[Math.floor(Math.random() * colors.length)];
+      console.log("RandomColr"+color)
+      return color;
+  }
+
+
+  $('.circle').each(function(){
+const colors = ["red","black","yellow","green"]; 
+let winsize=$(window).width(); //$( window ).width()
+ 
+		$(this).css(
+    {
+        //"left": Math.random() % winsize +"px", 
+     "width":"50px",
+     "hight":"50px",
+     "border-radius":"50px",
+     "position": "absolute",
+    "background-color": colors[Math.floor(Math.random() * colors.length)],
+    "top": Math.floor(Math.random() % screen.height ) +"px",
+    "left": Math.floor(Math.random() * screen.width) + "px",
+})
+});
+
+
+    // $(".circle").css("background-color:","red")
+    //             .css("width:","50px")
+    //             .css("height:","50px")
+    //             .css("border-radius","50px")
+                
+    animate();
+   // console.log( "ready!" );
+   function animate(){
+   // $(".circle").css("background-color:", randomColor() );
+
+  setInterval(enlarge,250);
+}
+$(".circle").on("click",function(){
+    $(this).hide(); //
+})
+
+$("#circle").on("click",function(){
+    console.log("circle clicked");
+    $("#circle").hide(); //
+})
+
+function enlarge(){ 
+    
+// turn text yellow and make it bigger $("#clickme").css("color", "yellow");
+let size = parseInt($("#circle").css("width")); 
+if(size>400){
+    size = 50;
+    animate();
+}
+const newsize = size + 10 + "px";
+ $("#circle ,.circle").css("width", newsize );
+
+ $("#circle, .circle").css("height", newsize);
+ $("#circle ,.circle").css("border-radius", newsize)
+//$("#circle").css("width",)
+
+}
+});
+
+    </script>
+</head>
+<body>
+    <div id="circle"></div> 
+    <div class="formClass">
+        <label for="width">Width</label><br>
+        <input type="number" id="width" value="100"><br>
+        
+        <label for="growthAmount">Growth Amount</label><br>
+        <input type="number" id="growthAmount" value="10"><br>
+        
+        <label for="growthRate">Growth Rate</label><br>
+        <input type="number" id="growthRate"  value="250"><br>
+
+        <label for="numberOfCircle">Number of Circles</label><br>
+        <input type="number" id="numberOfCircle"  value="12"><br>
+        
+        <button id="start">Start</button>
+    </div>
+</body>
+</html>
