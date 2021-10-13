@@ -74,3 +74,13 @@ function  decreseOpacity(selectedDiv){
 
   
 });
+
+/* ----------------
+
+This assignment requires  full understanding of JQuery and I spend more than four hours of understanding and practicing 
+different jquery function  and then after I practice  I decided to the assignment and it takes arround 2 and half hours.
+I tried each funtionality and  deleting  one circle takes about half an hour.
+The web page can be accessed from  the function url.
+https://muluadam.github.io/WAP/ 
+
+*/
