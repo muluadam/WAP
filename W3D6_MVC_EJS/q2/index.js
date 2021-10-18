@@ -18,8 +18,7 @@ app.post('/result', (req, res) => {
         age="unknown";
     }
     res.render("result",{name:name,age:age});
-//    console.log(`name= ${name}`);
-//    console.log(`Age=${age}`);
+ 
    
 });
 app.listen(3000);
