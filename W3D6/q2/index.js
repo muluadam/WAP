@@ -1,23 +1,25 @@
-const express = require('express');
+const express = require('express'); 
+
+
 const app = express();
+
+app.use(express.urlencoded({extended:false}))
+
 app.get('/', (req, res) => {
-   res.send( "<!DOCTYPE html>"+
-   "<html>"+
-       "<head>"+
-           "<title>My App</title>"+
-       "</head>"+
-       "<body>"+
-           "<form action='/result' method='POST'>"+
-               "<label>Name <input type='text' name='name'></label>"+
-               "<label>Age <input type='text' name='age'></label>"+
-               "<input type='submit' value='submit query'></label>"+
-           "</form>"+
-       "</body>"+
-   "</html>");
+
+    let form=`    <form action="/result" method="post">
+    <label for="name"><input type="text" name="name" id="name">Name</label>
+    <label for="age"><input type="text" name="age" id="age">Age</label>
+    <input type="submit" />
+</form>`;
+
+   res.send(form );
 });
 app.post('/result', (req, res) => {
-     let name = req.query.name;
-    let age = req.query.age;
+console.log(req.body);
+     let name = req.body.name;
+    let age = req.body.age;
+
 
     age = (!age) ? "you age" : age;
     name = (!name) ? "person" : name;
