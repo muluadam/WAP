@@ -18,7 +18,5 @@ app.post('/result', (req, res) => {
         age="unknown";
     }
     res.render("result",{name:name,age:age});
- 
-   
 });
 app.listen(3000);
