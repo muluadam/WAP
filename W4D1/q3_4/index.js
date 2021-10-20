@@ -18,6 +18,8 @@ app.get("/products/:productId",function(req,res){
 app.post("/product/addtocart",function(req,res){
     req.session[req.body.productId]=(req.session[req.body.productId]||0)+1;
     res.redirect(303,"back");
+    req.redirect(301,"back"); //
+    
 });
 app.get("/cart",function(req,res){
     let cart=new Cart();
